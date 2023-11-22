@@ -10,7 +10,8 @@ To get started:
 3. Launch Cypress runner by entering ```npx cypress open``` in your terminal.
 4. In the Cypress runner UI, click on the ```petstore-api-tests.cy.js``` spec to run the tests. Enjoy!
 
-   ![image](https://github.com/apatte/cypress-api-testing/assets/64214550/5b23d052-45cb-46e5-85fd-3d9134509196)
+![image](https://github.com/apatte/cypress-api-testing/assets/64214550/f3ea8c45-46c9-46e2-905d-7b95a5c07b5f)
+
 
 
 
