@@ -1,5 +1,5 @@
-//these tests are based on the below swagger documentation
-//https://petstore.swagger.io/
+//Swagger documentation: https://petstore.swagger.io/
+//baseUrl: "https://petstore.swagger.io/v2" (stored in cypress.config.js)
 
 describe("Pet Store API Tests", () => {
   const newPet = {
