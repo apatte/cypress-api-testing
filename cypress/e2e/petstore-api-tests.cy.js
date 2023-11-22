@@ -8,7 +8,7 @@ describe("Pet Store API Tests", () => {
     status: "available",
     updatedStatus: "sold",
   };
-  it.only("Should create a new pet", () => {
+  it("Should create a new pet", () => {
     cy.request("POST", `/pet`, newPet).then((response) => {
       expect(response.status).to.equal(200);
       // Check that specific properties match
@@ -18,14 +18,14 @@ describe("Pet Store API Tests", () => {
     });
   });
 
-  it.only("Should get a pet by ID", () => {
+  it("Should get a pet by ID", () => {
     cy.request("GET", `/pet/${newPet.id}`).then((response) => {
       expect(response.status).to.equal(200);
       expect(response.body.id).to.equal(newPet.id);
     });
   });
 
-  it.only("Should update a pet's status", () => {
+  it("Should update a pet's status", () => {
     cy.request("POST", `/pet`, {
       petId: newPet.id,
       status: newPet.updatedStatus,
@@ -35,11 +35,11 @@ describe("Pet Store API Tests", () => {
     });
   });
 
-  it.only("Should delete a pet by ID", () => {
+  it("Should delete a pet by ID", () => {
     cy.request("DELETE", `/pet/${newPet.id}`).then((response) => {
       expect(response.status).to.equal(200);
     });
-    cy.log("the deleted record should no longer exist");
+    //check that the deleted record no longer exists
     cy.request({ url: `/pet/${newPet.id}`, failOnStatusCode: false }).then(
       (response) => {
         expect(response.status).to.equal(404);
