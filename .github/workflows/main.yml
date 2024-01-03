@@ -1,7 +1,9 @@
 name: Run Cypress Tests on Push
 
-on: [push]
-
+on: 
+  push:
+  pull_request:
+  workflow_dispatch:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
