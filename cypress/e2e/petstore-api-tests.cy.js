@@ -3,7 +3,7 @@
 
 describe("Pet Store API Tests", () => {
   const newPet = {
-    id: cy.helper.randomID(),
+    id: 123456,
     name: "Fido",
     status: "available",
     updatedStatus: "sold",
